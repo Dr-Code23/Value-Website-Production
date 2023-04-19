@@ -12,24 +12,24 @@ export class ShowComponent {
   title:any
   price:any
   servv:any[]=[]
-  constructor(private serv :UserServiceService , 
+  constructor(private serv :UserServiceService ,
     private tostor:ToastrService){
-  
+
   }
-  
-  
-  
+
+
+
   ngOnInit():void{
   this.getAll()
 this.getAllOreder()
   }
   getAll(){
     this.serv.showFavorite().subscribe((data:any)=>{
-      console.log(data.data[0].service[0]);
-      this.show=data.data[0].service[0].images
-this.title=data.data[0].service[0].title
+
+this.title=data.data
 // this.price=data.data[0].service[0].price
-console.log(data.data[0].service[0].images);
+console.log(data.data
+);
 
     })
   }

@@ -37,14 +37,14 @@ imgs:boolean=false
   // successCallback: any;
   // errorCallback: any;
 constructor(private serv:UserServiceService , private router:Router,private http:HttpClient,
-  
+
   private domSanitizer:DomSanitizer
   ){}
 
 
 
 ngOnInit():void{
- 
+
 
 this.getcat()
 this.getAll()
@@ -59,7 +59,7 @@ this.get()
       const channel = pusher.subscribe('new-message');
       channel.bind('new-message', (data:any) =>{
         console.log(data.message.message);
-        
+
         return this.messages.push(data.message.message);
 
       });
@@ -71,22 +71,22 @@ this.get()
   }
 
   submit(){
-    return this.http.post('https://adminpanel.valuclean.co/api/store-message',{
+    return this.http.post('https://api.valuclean.co/api/store-message',{
 
        message:this.message,
-     
+
       //  photo:this.url,
-      // room_id:17 
+      // room_id:17
        // token:'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZhbHVjbGVhbmluZy5lcnAtZXZlcmVzdC5jb20vYXBpL0FkbWluL0xvZ2luIiwiaWF0IjoxNjgwOTI4MDM2LCJuYmYiOjE2ODA5MjgwMzYsImp0aSI6IkZXdVVQN0VTQzZGSjZBTVUiLCJzdWIiOiI2IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.NAHFuRt_somSzZxa1BT1UVh_4LOaC2FyhnOgjD69iKg'
      }).subscribe(()=>this.message='');
      this.imgs=true
    }
- 
+
    select(event:any){
      this.message=event.target.value;
      // this.messages.push({message:this.message})
    }
- 
+
 
 getAll(){
 this.serv.showService().subscribe((data:any)=>{
@@ -98,7 +98,7 @@ this.serv.showService().subscribe((data:any)=>{
   break
     }
 
-    
+
   }
 
 
@@ -128,7 +128,7 @@ closeChat(){
 }
 
 get(){
-  this.data =this.http.post('https://valucleaning.erp-everest.com/api/room-messages',{
+  this.data =this.http.post('https://api.valuclean.co/api/room-messages',{
     id:7
   })
   .subscribe(
@@ -137,11 +137,11 @@ get(){
       this.odlMessages=this.data.data
     },error =>{
       console.error(error);
-      
+
     }
   )
-  
-  } 
+
+  }
   // send record
   sanitize(url:string){
     return this.domSanitizer.bypassSecurityTrustUrl(url);
@@ -153,7 +153,7 @@ start(){
     video:true,
     audio:true,
   };
- 
+
   navigator.mediaDevices.getUserMedia(mediaConstraints).then(this.successCallback.bind(this),this.errorCallback.bind(this))
   return this.url
 }

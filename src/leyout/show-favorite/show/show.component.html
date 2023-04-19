@@ -20,35 +20,19 @@
           <tr>
             <th>All Products</th>
             <th>Price</th>
-            <th>View</th>
             <th>Remove</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td><a class="ps-product--compare" href="product-detail.html"><img class="mr-15" src="images/product/item-1.html" alt=""> Air jordan One mid</a></td>
-            <td><strong>$150</strong></td>
-            <td><a class="ps-product-link" href="product-detail.html">View Product</a></td>
+        <tbody *ngFor="let services of title">
+          <tr *ngFor="let service1 of services.service">
+            <td><a class="ps-product--compare" href="product-detail.html"><img class="mr-15" src="images/product/item-1.html" alt="">
+              {{service1.title}}</a></td>
+            <td><strong>{{service1.price}}</strong></td>
             <td>
               <div class="ps-remove"></div>
             </td>
           </tr>
-          <tr>
-            <td><a class="ps-product--compare" href="product-detail.html"><img class="mr-15" src="images/product/item-2.html" alt=""> The Crusty Croissant</a></td>
-            <td><strong>$150</strong></td>
-            <td><a class="ps-product-link" href="product-detail.html">View Product</a></td>
-            <td>
-              <div class="ps-remove"></div>
-            </td>
-          </tr>
-          <tr>
-            <td><a class="ps-product--compare" href="product-detail.html"><img class="mr-15" src="images/product/item-3.html" alt="">The Rolling Pin</a></td>
-            <td><strong>$150</strong></td>
-            <td><a class="ps-product-link" href="product-detail.html">View Product</a></td>
-            <td>
-              <div class="ps-remove"></div>
-            </td>
-          </tr>
+
         </tbody>
       </table>
     </div>

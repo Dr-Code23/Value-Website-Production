@@ -22,14 +22,14 @@
                   <a tabindex="0" class="" data-tokens="null" role="option" aria-disabled="false" aria-selected="false">
                     <span class="text">   {{item.title}}</span><span class="glyphicon glyphicon-ok check-mark"></span>
                   </a>
-               
+
                   </li>
-                
+
                 </ul></div>
             <select  class="ps-select" title="Default Sorting" tabindex="-98">
               <option class="bs-title-option" value="">Default Sorting</option>
               <option></option>
-        
+
             </select></div>
       </div>
       <!-- 5 items per column-->
@@ -45,7 +45,7 @@
               </div>
               <img style="height: 268px;width: 100%;" [src]="item.images" alt=""><a class="ps-product__overlay"routerLink="/details/{{item.id}}"></a>
               <div class="ps-product__content full">
-              
+
                     <div class="br-wrapper br-theme-fontawesome-stars">
                       <select class="ps-rating" style="display: none;">
                         <ngx-star-rating class="myyy"  [(ngModel)]="item.rating" [id]="'rating'" ></ngx-star-rating>
@@ -83,15 +83,15 @@
         </div>
       </div>
      </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
       </div>
       <div class="ps-pagination">
         <ul class="pagination">
@@ -109,10 +109,10 @@
         <h3 class="widget-title">Category</h3>
         <ul *ngFor="let item of cat" class="ps-list--checked">
           <li ><a >{{item.title}}</a></li>
-      
+
         </ul>
       </aside>
-   
-     
+
+
     </aside>
   </main>
