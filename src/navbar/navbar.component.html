@@ -4,19 +4,17 @@
       <div class="ps-container">
         <div class="row">
               <div class="col-lg-6 col-md-8 col-sm-6 col-xs-12 ">
-                <p>460 West 34th Street, 15th floor, New York  -  Hotline: 804-377-3580 - 804-399-3580</p><i class="furniture-market"></i>
               </div>
               <div class="col-lg-6 col-md-4 col-sm-6 col-xs-12 ">
                 <div class="header__actions">
-                    
+
                     <a *ngIf="loginn" _ngcontent-gge-c298="" style="width: 98px;height: 37px;top: 0px;border-radius: 16px;"  routerLink="/login" class="ps-btn">Login</a>
                     <a *ngIf="logg&&com!==null"  _ngcontent-gge-c298="" style="width: 98px;height: 37px;top: 0px;border-radius: 16px;"  (click)="logoutCompany()" class="ps-btn">Logout</a>
 
                     <div class="btn-group ps-dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language<i class="fa fa-angle-down"></i></a>
                     <ul class="dropdown-menu">
-                      <li><a href="#"><img src="../assets/images/flag/usa.svg" alt=""> USD</a></li>
-                      <li><a href="#"><img src="../assets/images/flag/singapore.svg" alt=""> SGD</a></li>
-                      <li><a href="#"><img src="../assets/images/flag/japan.svg" alt=""> JPN</a></li>
+                      <li><a href="#"><img src="../assets/images/flag/usa.svg" alt=""> EN</a></li>
+                      <li><a href="#"><img src="../assets/images/flag/singapore.svg" alt=""> SV</a></li>
                     </ul>
                   </div>
 
@@ -28,7 +26,7 @@
     <nav *ngIf="com ==null" class="navigation">
       <div  class="ps-container"><a class="ps-logo"routerLink="/home"><img style="margin-top: 12px;" src="../assets/imgs/152 - 38 Valu Clean Care Site Logo 02.png" alt=""></a><ul class="main-menu menu">
               <li class="current-menu-item menu-item-has-children"><a routerLink="/home">Home</a>
-                 
+
               </li>
               <li class="menu-item-has-children has-mega-menu"><a routerLink="/detalisservice">Services</a>
                 <!-- <div class="mega-menu">
@@ -93,65 +91,45 @@
                 </div> -->
               </li>
               <li><a routerLink="/about">About</a></li>
-              <li class="menu-item-has-children"><a href="#">Pages</a>
-                    <ul class="sub-menu" style="display: block;">
-                      <li class="menu-item-has-children"><a href="compare.html">Product</a>
-                            <ul class="sub-menu" style="display: block;">
-                              <li><a href="product-list.html">Product List</a></li>
-                              <li><a href="product-list-no-sidebar.html">Product List No Sidebar</a></li>
-                              <li><a href="product-detail.html">Product Detail</a></li>
-                            </ul>
-                      </li>
-                      <li class="menu-item-has-children"><a href="whishlist.html">Other Pages</a>
-                            <ul class="sub-menu" style="display: block;">
-                              <li><a href="cart.html">Shopping Cart</a></li>
-                              <li><a href="404-page.html">404-page</a></li>
-                              <li><a href="checkout.html">Checkout</a></li>
-                              <li><a href="compare.html">Compare</a></li>
-                              <li><a href="whishlist.html">Whishlist</a></li>
-                            </ul>
-                      </li>
-                    </ul>
-              </li>
               <li><a routerLink="/contact">Contact</a></li>
             </ul>
-            
+
         <div class="menu-toggle"><span></span></div>
         <div *ngIf="user !== null" class="ps-cart">
             <a class="ps-cart__toggle">
                 <img [src]="profile.photo" alt=""></a>
-         
-         
+
+
             <div class="ps-cart__listing">
             <div class="ps-cart__content">
               <div class="ps-cart-item">
                 <!-- <a class="ps-cart-item__close" href="#"></a> -->
-         
+
                 <div class="ps-cart-item__content">
                     <a class="ps-cart-item__title" routerLink="/profile">Profile</a>
-            
-                </div> 
+
+                </div>
                 <div class="ps-cart-item__content">
                     <a class="ps-cart-item__title" routerLink="/show">Show Favorite</a>
 
                 </div>
               </div>
-        
+
             </div>
-        
+
             <div class="ps-cart__footer">
                 <a style="cursor: pointer;" class="ps-btn" (click)="logout()">Logout<i class="furniture-next"></i></a>
-            
+
             </div>
           </div>
         </div>
-        
-        
+
+
         <form class="ps-form--search" action="http://warethemes.com/html/flourish/do_action" method="post"><i class="furniture-search"></i>
           <input class="form-control" type="text" placeholder="Find product">
           <button>Search</button>
         </form>
-        
+
       </div>
     </nav>
   </header>

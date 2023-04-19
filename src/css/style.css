@@ -1693,9 +1693,9 @@ body {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  background-color: #FFA945;
-  background-image: -webkit-linear-gradient(-90deg, #FFA945 0%, #DD7A38 97%);
-  background-image: linear-gradient(-180deg,#FFA945 0%, #DD7A38 97%);
+  background-color: blue;
+  background-image: -webkit-linear-gradient(-90deg, royalblue 0%, blue 97%);
+  background-image: linear-gradient(-180deg,royalblue 0%, blue 97%);
 }
 
 .ps-btn:before, button.ps-btn:before {
@@ -1710,9 +1710,9 @@ body {
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   border-radius: 50px;
-  background-color: #ff9112;
-  background-image: -webkit-linear-gradient(-90deg, #ff9112 0%, #c16121 97%);
-  background-image: linear-gradient(-180deg,#ff9112 0%, #c16121 97%);
+  background-color: blue;
+  background-image: -webkit-linear-gradient(-90deg, royalblue 0%, blue 97%);
+  background-image: linear-gradient(-180deg,royalblue 0%, blue 97%);
   visibility: hidden;
   opacity: 0;
   -webkit-transition: all 0.4s ease;
@@ -1809,8 +1809,8 @@ body {
 
 .ps-btn--outline:hover, button.ps-btn--outline:hover {
   color: #fff;
-  background-color: #dd7a38;
-  border-color: #dd7a38;
+  background-color: royalblue;
+  border-color: blue;
 }
 
 .ps-btn--favorite {
@@ -3620,9 +3620,9 @@ textarea.form-control:-ms-input-placeholder {
 .ps-block--category:before {
   width: 100%;
   height: 100%;
-  background-color: #df8a47;
-  background-image: -webkit-linear-gradient(-225deg, #df8a47, #ffae53);
-  background-image: linear-gradient(-45deg,#df8a47, #ffae53);
+  background-color: blue;
+  background-image: -webkit-linear-gradient(-225deg, royalblue, blue);
+  background-image: linear-gradient(-45deg,royalblue, blue);
 }
 
 .ps-block--category:after {
@@ -7376,7 +7376,7 @@ svg {
 }
 
 .ps-form--contact .form-control:hover {
-  border-color: #dd7a38;
+  border-color: ghostwhite;
 }
 
 .ps-form--contact textarea.form-control {
@@ -8466,9 +8466,9 @@ svg {
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   border-radius: 50px;
-  background-color: #ff9112;
-  background-image: -webkit-linear-gradient(-90deg, #ff9112 0%, #c16121 97%);
-  background-image: linear-gradient(-180deg,#ff9112 0%, #c16121 97%);
+  background-color: royalblue;
+  background-image: -webkit-linear-gradient(-90deg, royalblue 0%, blue 97%);
+  background-image: linear-gradient(-180deg,royalblue 0%, blue 97%);
   visibility: hidden;
   opacity: 0;
   -webkit-transition: all 0.4s ease;
@@ -8668,7 +8668,7 @@ svg {
 }
 
 .header__actions > a:hover, .header__actions .ps-dropdown > a:hover {
-  background-color: #dd7a38;
+  background-color: royalblue;
   color: #fff;
 }
 
