@@ -1,0 +1,139 @@
+<div class="ps-hero bg--cover" data-background="images/hero/bread-2.jpg" style=" height:104%;background: url(../../../assets/imgs/house-cleaning.jpg);">
+    <div class="ps-container">
+      <h3>Details Page</h3>
+      <div class="ps-breadcrumb">
+        <ol class="breadcrumb">
+          <li><a routerLink="/home">Home</a></li>
+          <li class="active">Shop Page</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <main class="ps-main">
+    <div class="ps-container">
+      <div class="ps-product--detail">
+        <div class="row">
+              <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12 ">
+                <div class="ps-product__thumbnail">
+                  <div class="ps-product__image slick-initialized slick-slider">
+                    <div aria-live="polite" class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 4648px; transform: translate3d(-664px, 0px, 0px);" role="listbox"><div class="item slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" style="width: 664px;" tabindex="-1"><a href="images/product/detail/large-5.jpg" tabindex="-1"><img src="images/product/detail/large-5.jpg" alt=""></a></div><div class="item slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 664px;" tabindex="-1" role="option" aria-describedby="slick-slide00"><a href="images/product/detail/large-1.jpg" tabindex="0"><img style="margin-left: 556px;" src="{{all.images}}" alt=""></a></div><div class="item slick-slide" data-slick-index="1" aria-hidden="true" style="width: 664px;" tabindex="-1" role="option" aria-describedby="slick-slide01"><a href="images/product/detail/large-2.jpg" tabindex="-1"><img src="images/product/detail/large-2.jpg" alt=""></a></div><div class="item slick-slide" data-slick-index="2" aria-hidden="true" style="width: 664px;" tabindex="-1" role="option" aria-describedby="slick-slide02"><a href="images/product/detail/large-3.jpg" tabindex="-1"><img src="images/product/detail/large-3.jpg" alt=""></a></div><div class="item slick-slide" data-slick-index="3" aria-hidden="true" style="width: 664px;" tabindex="-1" role="option" aria-describedby="slick-slide03"><a href="images/product/detail/large-4.jpg" tabindex="-1"><img src="images/product/detail/large-4.jpg" alt=""></a></div><div class="item slick-slide" data-slick-index="4" aria-hidden="true" style="width: 664px;" tabindex="-1" role="option" aria-describedby="slick-slide04"><a href="images/product/detail/large-5.jpg" tabindex="-1"><img src="images/product/detail/large-5.jpg" alt=""></a></div><div class="item slick-slide slick-cloned" data-slick-index="5" aria-hidden="true" style="width: 664px;" tabindex="-1"><a href="images/product/detail/large-1.jpg" tabindex="-1"></a></div></div></div>
+                    
+                    
+                    
+                    
+                  </div>
+            
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 ">
+                <div class="ps-product__info">
+                  <div class="ps-product__rating">
+                    <div class="br-wrapper br-theme-fontawesome-stars">
+                    <div class="br-widget">
+                      
+                    
+                    </div>
+                 
+                </div><a href="#"></a>
+                  </div>
+                  <h1 style="margin-top: 80px;">{{all.title}}</h1>
+                  <p class="ps-product__category"><a href="#"> Category</a><a href="#">  </a>,<a href="#">  {{all.category}}</a></p>
+                  <h3 class="ps-product__price"><del><span>$</span> 330</del>  {{all.price}}<span>$</span></h3>
+                  <div class="ps-product__short-desc">
+                    
+                  </div>
+               
+                  
+                  <div class="ps-product__shopping"><a class="ps-btn" routerLink="/order/{{all.id}}">Add To Cart</a>
+                    <div class="ps-product__actions">
+                        <a class="mr-10"(click)="addtoFavorite(all.id)" ><i  class="furniture-heart"></i></a>
+                        <a href="compare.html" title="Compare"><i class="furniture-reload"></i></a></div>
+                  </div>
+                  <div class="ps-product__sharing">
+                    <p>Share this:<a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a></p>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="ps-product__content">
+            <ul class="tab-list" role="tablist">
+              <li class="active"><a href="#tab_01" aria-controls="tab_01" role="tab" data-toggle="tab">Overview</a></li>
+              <li><a href="#tab_02" aria-controls="tab_02" role="tab" data-toggle="tab">Review</a></li>
+              <!-- <li><a href="#tab_03" aria-controls="tab_03" role="tab" data-toggle="tab">PRODUCT TAGs</a></li> -->
+              <li><a href="#tab_04" aria-controls="tab_04" role="tab" data-toggle="tab">ADDReview</a></li>
+            </ul>
+          </div>
+        <div class="tab-content">
+          <div class="tab-pane active" role="tabpanel" id="tab_01">
+            <p style="font-size: 22px;">{{all.description}}</p>      
+          </div>
+          <div  class="tab-pane" role="tabpanel" id="tab_02">
+            <button style="
+            font-size: 11px;
+            margin-bottom: 12px;
+        " class="ps-btn" routerLink="/detalisReviwe/{{all.id}}"> <strong>Show all review</strong></button>
+            <div  class="ps-review">
+              <div class="ps-review__thumbnail" *ngFor="let user of ReviewUser"><img [src]="user.photo"  alt=""></div>
+              <div class="ps-review__content">
+                <header>
+                  <div class="br-wrapper br-theme-fontawesome-stars">
+                    <!-- <select class="ps-rating" >
+                    <option value="1">1</option>
+                    <option value="1">2</option>
+                    <option value="1">3</option>
+                    <option value="1">4</option>
+                    <option value="5">5</option>
+                  </select> -->
+
+                  <div class="br-widget">
+                  <ngx-star-rating style="font-size: 10px;"  [(ngModel)]="rating" [id]="'rating'" ></ngx-star-rating>
+
+                    <div class="br-current-rating"></div></div></div>
+                  <p *ngFor="let user of ReviewUser">By<a > {{user.name}}</a> </p>
+                </header>
+                <p >{{Review}}</p>
+              </div>
+            </div>
+           
+          </div>
+          <!-- <div class="tab-pane" role="tabpanel" id="tab_03">
+            <p>Add your tag <span> *</span></p>
+            <form class="ps-form--create-tags" action="http://warethemes.com/html/flourish/_action" method="post">
+              <div class="form-group">
+                <input class="form-control" type="text" placeholder="">
+                <button class="ps-btn">Add Tags</button>
+              </div>
+            </form>
+            <p>Use spaces to separate tags. Use single quotes ( * ) for phrases.</p>
+          </div> -->
+          <div class="tab-pane" role="tabpanel" id="tab_04">
+          <app-create ></app-create>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+  <div id="pre-loader"  *ngIf="loader">
+    <div class="loader ">
+        <div class="loader__item"></div>
+        <div class="loader__item"></div>
+        <div class="loader__item"></div>
+        <div class="loader__item"></div>
+        <div class="loader__item"></div>
+        </div>      </div>
+
+
+
+
+

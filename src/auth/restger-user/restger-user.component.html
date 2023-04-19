@@ -1,0 +1,62 @@
+
+
+<div class="login-register-area ptb-100">
+
+    <div class="wrapper">
+<div id="pre-loader"  *ngIf="loader">
+    <div class="loader ">
+        <div class="loader__item"></div>
+        <div class="loader__item"></div>
+        <div class="loader__item"></div>
+        <div class="loader__item"></div>
+        <div class="loader__item"></div>
+        </div>      </div>
+<div class="page-section mb-60">
+    <div class="container">
+        <div class="row">
+         
+            <div class="col-sm-12 col-md-12 col-xs-12 col-lg-6 mb-30" style="
+            margin-bottom: 30px;
+            margin-left: 280PX;
+            margin-top: 100px;
+        ">        
+        
+        <form [formGroup]="registerUser">
+                    <div class="login-form">
+                        <h4 class="login-title">Register</h4>
+                        <div class="row">
+                            <div class="col-md-6 mb-20">
+                                <label>Email <span>*</span></label>
+                                <input formControlName="email" class="mb-0" type="email" placeholder="Email Address">
+                            </div>
+                            <div class="col-md-6 col-12 mb-20">
+                                <label> Name <span>*</span></label>
+                                <input formControlName="name" class="mb-0" type="text" placeholder= "Name">
+                            </div>
+                            <div class="col-md-6 col-12 mb-20">
+                                <label>Address <span>*</span></label>
+                                <input formControlName="address" class="mb-0" type="text" placeholder="Address">
+                            </div>
+                          
+                            <div class="col-md-6 mb-20">
+                                <label>Phone <span>*</span></label>
+                                <input class="mb-0" formControlName="phone" type="text" placeholder="Phone">
+                            </div>
+                            <div class="col-md-6 mb-20">
+                                <label> Password <span>*</span></label>
+                                <input formControlName="password" class="mb-0" type="password" placeholder=" Password">
+                            </div>
+                            <div class="col-md-6 mb-20">
+                                <label> Confirm Password <span>*</span> </label>
+                                <input formControlName="password_confirmation" class="mb-0" type="password" placeholder=" Confirm Password">
+                            </div>
+                            <div class="col-12">
+                                <button (click)="Register()" [disabled]="registerUser.invalid || (registerUser.value.password !== registerUser.value.password_confirmation)" class="register-button mt-0">Register</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
