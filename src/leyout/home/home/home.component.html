@@ -1,0 +1,411 @@
+<div class="ps-product--banner">
+  <div class="ps-product__thumbnail"><a href="#"><img src="../../../assets/imgs/626 - 626 Character Valu Clean.png"
+        alt=""></a></div>
+  <div class="animate__animated animate__slideInUp ps-product__content">
+    <div class="br-wrapper br-theme-fontawesome-stars"><select class="ps-rating" style="display: none;">
+
+      </select>
+      <div class="br-widget"><a href="#" data-rating-value="1" data-rating-text="1" class="br-selected br-current"></a>
+      </div>
+    </div>
+
+
+    <div class="ps-product__actions"><a class="ps-btn" routerLink="/contact">Contact  Us</a></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="ps-section ps-home-categories">
+  <div class="ps-container">
+    <div class="ps-section__header text-center">
+      <h3 class="ps-section__title">All Category</h3><span class="ps-section__line"></span>
+    </div>
+    <div class="ps-section__content ps-col-tiny">
+      <div class="row">
+        <div class=" col-lg-2 col-md-3 col-sm-3 col-xs-12 " *ngFor="let item of cat">
+          <div class="ps-block--category animate__animated  animate__lightSpeedInLeft" data-mh="category"
+            style="height: 205px;">
+
+            <a class="ps-block__overlay"></a>
+
+            <img style="width: 114px;
+                    height: 103px;
+                    border-radius: 45px;" [src]="item.images" alt="">
+            <a style="margin-top: 19px;">{{item.title }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ps-section__footer text-center"><a style="font-size: 21px;padding: 21px;" class="ps-btn" href="#">View all categories</a></div>
+  </div>
+</div>
+
+
+
+
+<div class="ps-section ps-home-best-product">
+  <div class="ps-container">
+    <div class="ps-section__header text-center">
+      <!-- <p>Choose your need item</p> -->
+      <h3 class="ps-section__title">Best Our Services</h3><span class="ps-section__line"></span>
+    </div>
+    <div class="ps-section__content mt-100">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 " *ngFor="let  services of all"  >
+          <div class="ps-product" style="margin-bottom: 109px; width: 90%;">
+            <div class="ps-product__thumbnail">
+              <div class="ps-badge"><span>New</span></div>
+              <div class="ps-badge ps-badge--sale"></div><a class="ps-product__favorite"
+                routerLink="/details/{{services.id}}"><i class="furniture-heart"></i></a><img
+                style="width: 307.773px; height: 307.773px;" [src]="services.images" alt=""><a
+                class="ps-product__overlay" routerLink="/details/{{services.id}}"></a>
+              <div class="ps-product__content full">
+                <div class="ps-product__variants">
+                  <!-- <div class="item"><img src="../../../assets/categories/cat-2.jpg" alt=""></div>
+                        <div class="item"><img src="../../../assets/categories/cat-2.jpg" alt=""></div>
+                        <div class="item"><img src="../../../assets/categories/cat-2.jpg" alt=""></div>
+                        <div class="item"><img src="../../../assets/categories/cat-2.jpg" alt=""></div>
+                        <div class="item"><img src="../../../assets/categories/cat-2.jpg" alt=""></div> -->
+                </div>
+                <div class="br-wrapper br-theme-fontawesome-stars">
+
+
+
+                  <div class="br-widget">
+
+                    <a href="#" data-rating-value="1" data-rating-text="1" class="br-selected br-current"></a>
+                    <a href="#" data-rating-value="1" data-rating-text="2" class="br-selected br-current"></a>
+                    <a href="#" data-rating-value="1" data-rating-text="3" class="br-selected br-current"></a>
+                    <a href="#" data-rating-value="1" data-rating-text="4" class="br-selected br-current"></a>
+                    <a href="#" data-rating-value="2" data-rating-text="5"></a>
+                    <div class="br-current-rating"></div>
+                  </div>
+                </div>
+
+
+
+                <a class="ps-product__title" href="product-detail-2.html">{{services.title}}</a>
+                <p class="ps-product__price">
+                </p><a class="ps-btn ps-btn--sm" href="product-detail-2.html">Add to cart</a>
+                <p class="ps-product__feature"><i class="furniture-delivery-truck-2"></i>Free Shipping in 24 hours</p>
+              </div>
+            </div>
+            <div class="ps-product__content">
+              <div class="br-wrapper br-theme-fontawesome-stars">
+
+                <div class="br-widget">
+                  <a href="#" data-rating-value="1" data-rating-text="1" class="br-selected br-current"></a>
+                  <a href="#" data-rating-value="1" data-rating-text="2" class="br-selected br-current"></a>
+                  <a href="#" data-rating-value="1" data-rating-text="3" class="br-selected br-current"></a>
+                  <a href="#" data-rating-value="1" data-rating-text="4" class="br-selected br-current"></a>
+                  <a href="#" data-rating-value="2" data-rating-text="5"></a>
+                  <div class="br-current-rating"></div>
+                </div>
+              </div><a class="ps-product__title" href="product-detail-2.html">{{services.title}}</a>
+              <div class="ps-product__categories"><a href="product-listing.html">{{services.category}}</a></div>
+              <p class="ps-product__price">
+                 <del></del>${{services.price}}
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="ps-section__footer text-center">
+    <a  style="font-size: 21px;padding: 21px;"class="ps-btn" routerLink="/detalisservice">View all Services</a>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="ps-partners">
+  <div class="ps-container">
+    <div class="ps-slider--partners owl-slider owl-carousel owl-theme owl-loaded" data-owl-auto="true"
+      data-owl-loop="true" data-owl-speed="5000" data-owl-gap="50" data-owl-nav="false" data-owl-dots="false"
+      data-owl-item="7" data-owl-item-xs="3" data-owl-item-sm="5" data-owl-item-md="6" data-owl-item-lg="7"
+      data-owl-duration="1000" data-owl-mousedrag="on">
+      <div class="owl-stage-outer">
+        <div class="owl-stage"
+          style="transform: translate3d(-2451.43px, 0px, 0px); transition: all 1s ease 0s; width: 4290.01px;">
+          <div class="owl-item cloned" style="width: 154.286px; margin-right: 50px;"><img
+              src="../../../assets/images/partner/1.png" alt=""></div>
+          <div class="owl-item cloned" style="width: 154.286px; margin-right: 50px;"><img
+              src="../../../assets/images/partner/1.png" alt=""></div>
+          <div class="owl-item cloned" style="width: 154.286px; margin-right: 50px;"><img
+              src="../../../assets/images/partner/1.png" alt=""></div>
+          <div class="owl-item cloned" style="width: 154.286px; margin-right: 50px;"><img
+              src="../../../assets/images/partner/1.png" alt=""></div>
+          <div class="owl-item cloned" style="width: 154.286px; margin-right: 50px;"><img
+              src="../../../assets/images/partner/1.png" alt=""></div>
+          <div class="owl-item cloned" style="width: 154.286px; margin-right: 50px;"><img
+              src="../../../assets/images/partner/1.png" alt=""></div>
+          <div class="owl-item cloned" style="width: 154.286px; margin-right: 50px;"><img src="images/partner/7.png"
+              alt=""></div>
+          <div class="owl-item" style="width: 154.286px; margin-right: 50px;"><img src="images/partner/1.png" alt="">
+          </div>
+          <div class="owl-item" style="width: 154.286px; margin-right: 50px;"><img src="images/partner/2.png" alt="">
+          </div>
+          <div class="owl-item" style="width: 154.286px; margin-right: 50px;"><img src="images/partner/3.png" alt="">
+          </div>
+          <div class="owl-item" style="width: 154.286px; margin-right: 50px;"><img src="images/partner/4.png" alt="">
+          </div>
+          <div class="owl-item" style="width: 154.286px; margin-right: 50px;"><img src="images/partner/5.png" alt="">
+          </div>
+          <div class="owl-item active" style="width: 154.286px; margin-right: 50px;"><img src="images/partner/6.png"
+              alt=""></div>
+          <div class="owl-item active" style="width: 154.286px; margin-right: 50px;"><img src="images/partner/7.png"
+              alt=""></div>
+          <div class="owl-item cloned active" style="width: 154.286px; margin-right: 50px;"><img
+              src="images/partner/1.png" alt=""></div>
+          <div class="owl-item cloned active" style="width: 154.286px; margin-right: 50px;"><img
+              src="images/partner/2.png" alt=""></div>
+          <div class="owl-item cloned active" style="width: 154.286px; margin-right: 50px;"><img
+              src="images/partner/3.png" alt=""></div>
+          <div class="owl-item cloned active" style="width: 154.286px; margin-right: 50px;"><img
+              src="images/partner/4.png" alt=""></div>
+          <div class="owl-item cloned active" style="width: 154.286px; margin-right: 50px;"><img
+              src="images/partner/5.png" alt=""></div>
+          <div class="owl-item cloned" style="width: 154.286px; margin-right: 50px;"><img src="images/partner/6.png"
+              alt=""></div>
+          <div class="owl-item cloned" style="width: 154.286px; margin-right: 50px;"><img
+              src="../../../assets/images/partner/1.png" alt=""></div>
+        </div>
+      </div>
+      <div class="owl-controls">
+        <div class="owl-nav">
+          <div class="owl-prev" style="display: none;"><i class="fa fa-angle-left"></i></div>
+          <div class="owl-next" style="display: none;"><i class="fa fa-angle-right"></i></div>
+        </div>
+        <div class="owl-dots" style="display: none;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- start chatt  -->
+
+<div class="chatt d-flex align-items-end flex-column">
+  <!-- <div style="position:fixed"> -->
+  <div  *ngIf="insertIcon" (click)="checkChat()" style="color:rgb(255, 145, 0) ;position:fixed;z-index:4;font-size:64px;margin-right:20px" >
+      <i class="fa fa-commenting" aria-hidden="true"></i>
+  </div>
+
+<div *ngIf="insertChat" class="page-content page-container" id="page-content" style="position:fixed;bottom:0;z-index:1" >
+    <div class="padding">
+        <div class="row container d-flex justify-content-end  ">
+<div class="col-md-4">
+
+              <div class="box box-warning direct-chat direct-chat-warning">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Chat Messages</h3>
+
+                  <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="" data-widget="chat-pane-toggle" data-original-title="Contacts">
+                      <i class="fa fa-comments"></i></button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove" (click)="closeChat()"><i class="fa fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="box-body">
+
+                  <div  class="direct-chat-messages">
+
+                    <div class="direct-chat-msg">
+                      <div class="direct-chat-info clearfix">
+                        <span class="direct-chat-name pull-left">Value Clean </span>
+                      </div>
+
+                      <img class="direct-chat-img" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="message user image">
+
+                      <div class="direct-chat-text">
+                        Hi,How Can I Help You ?
+                      </div>
+
+                    </div>
+
+
+
+                    <div class="direct-chat-msg right">
+                      <div class="direct-chat-info clearfix">
+                        <span class="direct-chat-name pull-right">Sarah Bullock</span>
+                        <span class="direct-chat-timestamp pull-left"></span>
+                      </div>
+
+                      <img *ngIf="imgs" class="direct-chat-img" src="https://img.icons8.com/office/36/000000/person-female.png" alt="message user image">
+
+                      <div *ngFor="let item of messages" class="direct-chat-text">
+                        {{item}}
+                      </div>
+
+                    </div>
+
+
+
+
+
+                    <!-- <div class="direct-chat-msg">
+                      <div class="direct-chat-info clearfix">
+                        <span class="direct-chat-name pull-left">Timona Siera</span>
+                        <span class="direct-chat-timestamp pull-right">23 Jan 5:37 pm</span>
+                      </div>
+
+                      <img class="direct-chat-img" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="message user image">
+
+                      <div class="direct-chat-text">
+                        For what reason would it be advisable for me to think about business content?
+                      </div>
+
+                    </div> -->
+
+                    <!-- <div class="direct-chat-msg right">
+                      <div class="direct-chat-info clearfix">
+                        <span class="direct-chat-name pull-right">Sarah Bullock</span>
+                        <span class="direct-chat-timestamp pull-left">23 Jan 6:10 pm</span>
+                      </div>
+
+                      <img class="direct-chat-img" src="https://img.icons8.com/office/36/000000/person-female.png" alt="message user image">
+
+                      <div class="direct-chat-text">
+                         I would love to.
+                      </div>
+
+                    </div> -->
+
+
+                  </div>
+
+                </div>
+
+                <div class="box-footer">
+                  <form >
+                    <div class="input-group">
+                      <input (change)="select($event)" type="text"  placeholder="Type Message ..." class="form-control">
+                      <span class="input-group-btn">
+                            <button  (click)="submit()" type="button" class="btn btn-warning btn-flat">Send</button>
+
+                          </span>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+
+            </div>
+             </div>
+
+              </div>
+
+</div>
+
+</div>
+
+<!--
+
+<div style="text-align:center">
+  <h1>
+  </h1>
+  <button (click)="stop()" class="btn btn-danger" *ngIf="recording"> Stop Recording </button>
+  <a (click)="start()" class="btn btn-primary" *ngIf="!recording"> Start Recording </a>
+
+    <div class="clearfix"></div>
+    <audio controls="" *ngIf="url">
+        <source [src]="sanitize(url)" type="audio/wav">
+    </audio>
+      <a (click)="start()"  (click)="submit()" class="btn btn-primary" *ngIf="!recording"> Start Recording </a>
+                            <button (click)="stop()" class="btn btn-danger" *ngIf="recording"> Stop Recording </button>
+
+</div> -->
+
+
+
+<div id="pre-loader" *ngIf="loader">
+  <div class="loader ">
+    <div class="loader__item"></div>
+    <div class="loader__item"></div>
+    <div class="loader__item"></div>
+    <div class="loader__item"></div>
+    <div class="loader__item"></div>
+  </div>
+</div>

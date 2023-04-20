@@ -1,0 +1,133 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "Website": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/ti-icons/css/themify-icons.css",
+              "node_modules/animate.css/animate.min.css", 
+              "src/plugins/font-awesome/css/font-awesome.min.css",
+              "src/plugins/furniture-icon/style.css",
+              "src/plugins/bootstrap/dist/css/bootstrap.min.css",
+              "src/plugins/owl-carousel/assets/owl.carousel.css",
+              "src/plugins/bootstrap-select/dist/css/bootstrap-select.min.css",  
+              "src/css/style.css",
+              "src/style.css",
+              "src/styles.css"
+            ],
+            "scripts": [
+              "src/plugins/jquery.min.js",
+              "src/plugins/bootstrap/dist/js/bootstrap.min.js",
+              "src/plugins/owl-carousel/owl.carousel.min.js",
+              "src/plugins/bootstrap-select/dist/js/bootstrap-select.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "4mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "150kb",
+                  "maximumError": "150kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "Website:build:production"
+            },
+            "development": {
+              "browserTarget": "Website:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "Website:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/ti-icons/css/themify-icons.css",
+              "node_modules/animate.css/animate.min.css", 
+              "src/plugins/font-awesome/css/font-awesome.min.css",
+              "src/plugins/furniture-icon/style.css",
+              "src/plugins/bootstrap/dist/css/bootstrap.min.css",
+              "src/plugins/owl-carousel/assets/owl.carousel.css",
+              "src/plugins/bootstrap-select/dist/css/bootstrap-select.min.css",  
+              "src/css/style.css",
+              "src/style.css",
+              "src/styles.css"
+            ],
+            "scripts": [
+              "src/plugins/jquery.min.js",
+              "src/plugins/bootstrap/dist/js/bootstrap.min.js",
+              "src/plugins/owl-carousel/owl.carousel.min.js",
+              "src/plugins/bootstrap-select/dist/js/bootstrap-select.min.js"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false
+  }
+}
